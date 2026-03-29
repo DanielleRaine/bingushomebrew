@@ -1,0 +1,689 @@
+{
+	"siteVersion": "2.25.4",
+	"_meta": {
+		"sources": [
+			{
+				"json": "bingus",
+				"abbreviation": "icu",
+				"full": "bingus",
+				"version": "1.0.0",
+				"edition": "classic"
+			}
+		],
+		"dateAdded": 1774765771,
+		"dateLastModified": 1774765771,
+		"edition": "classic"
+	},
+	"monster": [
+		{
+			"name": "Assimilated Drone",
+			"source": "bingus",
+			"size": [
+				"M"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "30d10 + 50",
+				"average": 215
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 18,
+			"dex": 13,
+			"con": 16,
+			"int": 16,
+			"wis": 16,
+			"cha": 13,
+			"save": {
+				"str": "+4",
+				"dex": "+1",
+				"con": "+3",
+				"int": "+7",
+				"wis": "+7",
+				"cha": "+1"
+			},
+			"skill": {
+				"athletics": "+8",
+				"perception": "+11"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 21,
+			"resist": [
+				"necrotic",
+				"psychic"
+			],
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"frightened",
+				"poisoned"
+			],
+			"languages": [
+				"Modron",
+				"telepathy 120 ft."
+			],
+			"cr": "12",
+			"trait": [
+				{
+					"name": "Axiomatic Mind",
+					"entries": [
+						"The drone can't be compelled to act in a manner contrary to its nature or its instructions."
+					]
+				},
+				{
+					"name": "Combat Ready",
+					"entries": [
+						"The drone has advantage on initiative rolls."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The drone makes three Syringe attacks. It can replace any number of attacks with a Force Blast attack instead."
+					]
+				},
+				{
+					"name": "Syringe",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 5 ft., one target. {@h}17 ({@damage 2d8 + 8}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Force Blast",
+					"entries": [
+						"{@atk rw} {@hit 12} to hit, range 30/60 ft., one target. {@h}14 ({@damage 2d8 + 5}) force damage."
+					]
+				},
+				{
+					"name": "Assimilate {@recharge 5}",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}44 ({@damage 8d8 + 8}) poison damage, and if the target is a Medium or smaller creature it has the {@condition grappled} condition (escape {@dc 10}). The target makes a {@dc 20} Constitution saving throw. On a failed save, they are MARKED. If they fail by 5 or more, they take {@h}17 ({@damage 2d8 + 8}) piercing damage. Until this grapple ends, the drone can't Assimilate against other targets."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"OTH",
+				"TP"
+			],
+			"damageTags": [
+				"B",
+				"I",
+				"O",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Corrupted Hexton Modron",
+			"source": "bingus",
+			"referenceSources": [
+				"ToFW"
+			],
+			"size": [
+				"H"
+			],
+			"type": "construct",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "40d12 + 120",
+				"average": 380
+			},
+			"speed": {
+				"walk": 40,
+				"fly": {
+					"number": 40,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"initiative": {
+				"advantageMode": "adv"
+			},
+			"str": 19,
+			"dex": 16,
+			"con": 17,
+			"int": 19,
+			"wis": 17,
+			"cha": 15,
+			"save": {
+				"int": "+9",
+				"wis": "+8"
+			},
+			"skill": {
+				"perception": "+13"
+			},
+			"senses": [
+				"truesight 120 ft."
+			],
+			"passive": 23,
+			"resist": [
+				"lightning",
+				"psychic"
+			],
+			"conditionImmune": [
+				"charmed",
+				"frightened"
+			],
+			"languages": [
+				"all",
+				"telepathy 120 ft."
+			],
+			"cr": "16",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The hexton casts one of the following spells, requiring no material components and using Intelligence as the spellcasting ability (spell save {@dc 17}):"
+					],
+					"will": [
+						"{@spell detect magic}",
+						"{@spell dispel magic}",
+						"{@spell mending} (as an action)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell plane shift} (self only)",
+							"{@spell protection from evil and good}"
+						]
+					},
+					"ability": "int",
+					"displayAs": "action"
+				}
+			],
+			"trait": [
+				{
+					"name": "Axiomatic Mind",
+					"entries": [
+						"The hexton can't be compelled to act in a manner contrary to its nature or its instructions."
+					]
+				},
+				{
+					"name": "Combat Ready",
+					"entries": [
+						"The hexton has advantage on initiative rolls."
+					]
+				},
+				{
+					"name": "Disintegration",
+					"entries": [
+						"If the hexton dies, its body disintegrates into dust, leaving behind anything it was carrying."
+					]
+				},
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"If the hexton fails a saving throw, it can choose to succeed instead."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The hexton makes one Pincer attack and two Tentacle attacks."
+					]
+				},
+				{
+					"name": "Pincer",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}13 ({@damage 2d8 + 4}) bludgeoning damage plus 10 ({@damage 3d6}) force damage. If the target is a creature, it must succeed on a {@dc 17} Constitution saving throw or have the {@condition incapacitated} condition until the end of its next turn."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 9} to hit, reach 10 ft., one target. {@h}15 ({@damage 2d10 + 4}) piercing damage, and if the target is a Medium or smaller creature, it has the {@condition grappled} condition (escape {@dc 14}). Until this grapple ends, the hexton can't use this tentacle against other targets. The hexton has six tentacles, each of which can grapple one target."
+					]
+				}
+			],
+			"reactionHeader": [
+				"The hexton can take up to three reactions per round but only one per turn."
+			],
+			"reaction": [
+				{
+					"name": "Counter Magic",
+					"entries": [
+						"The hexton attempts to interrupt a creature it can see that is casting a spell. If the spell is 3rd level or lower, it fails and has no effect. If the spell is 4th level or higher, the hexton makes an Intelligence check ({@dc 10} + the spell's level). On a success, the spell fails and has no effect."
+					]
+				},
+				{
+					"name": "Lightning Rebuke",
+					"entries": [
+						"When a creature within 120 feet of the hexton damages it, the hexton magically retaliates with an arc of lightning. The creature must make a {@dc 17} Dexterity saving throw, taking 11 ({@damage 2d10}) lightning damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Force Will",
+					"entries": [
+						"The target MARKED creature makes a {@dc 15} Wisdom saving throw. On a failed save, it immediately takes a turn while under the effects of Dominate Monster."
+					]
+				}
+			],
+			"token": {
+				"name": "Hexton Modron",
+				"source": "MPP"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"TP",
+				"XX"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"O",
+				"P"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			],
+			"savingThrowForcedSpell": [
+				"charisma"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"name": "Hexton Modron",
+				"source": "MPP",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"When the armies of Mechanus mobilize against the forces of chaos, hextons are the field generals who command modron troops. These hulking hierarchs lead groups of modrons in endeavors outside Mechanus, with the most notable example being the Great Modron March. Hextons have solid frames that bristle with six shining flanges. They boast a pair of arms and tentacles, both of which end in powerful pincers."
+								]
+							}
+						]
+					},
+					{
+						"type": "section",
+						"entries": [
+							{
+								"type": "entries",
+								"name": "Modrons",
+								"entries": [
+									"Constructed on the plane of Mechanus, modrons are partially mechanical beings that belong to a strict hierarchy. Each modron dutifully obeys commands from the rank directly above it and in turn acts as the superior to the rank directly below it, passing down commands from paragons of law to the lowliest monodrone. While most modrons are the lower-ranked base modrons—monodrones, duodrones, tridrones, quadrones, and pentadrones—the upper-tier hierarch modrons hold leadership positions, maintaining order in Mechanus and the realms beyond. For more information on modrons, see the {@i Monster Manual}."
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MPP/Hexton Modron.webp"
+						},
+						"width": 1000,
+						"height": 394
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MPP/Modrons.webp"
+						},
+						"title": "Modrons",
+						"width": 1700,
+						"height": 2200
+					}
+				]
+			}
+		},
+		{
+			"name": "Dragon Slayer Ornstein",
+			"isNamedCreature": true,
+			"source": "bingus",
+			"size": [
+				"L"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 26,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "30d20 + 270",
+				"average": 585
+			},
+			"speed": {
+				"walk": 60,
+				"climb": 30
+			},
+			"str": 14,
+			"dex": 30,
+			"con": 29,
+			"int": 17,
+			"wis": 25,
+			"cha": 29,
+			"save": {
+				"dex": "+18",
+				"wis": "+15",
+				"str": "+10",
+				"int": "+11"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"bludgeoning",
+				"piercing",
+				"slashing"
+			],
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "25",
+			"trait": [
+				{
+					"name": "Legendary Resistance (5/Day)",
+					"entries": [
+						"If Ornstein fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Ornstein has advantage on saving throws against spells and other magical effects."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ornstein makes four attacks: a combination of Lightning Stab and Lightning Bolt attacks."
+					]
+				},
+				{
+					"name": "Lightning Stab",
+					"entries": [
+						"{@atk mw} {@hit 17} to hit, reach 10 ft., one target. {@h}({@damage 2d8 + 9}) piercing damage plus ({@damage 4d6}) lightning damage."
+					]
+				},
+				{
+					"name": "Lightning Bolt",
+					"entries": [
+						"{@atk mw} {@hit 17} to hit, reach 60 ft., one target. {@h}14 ({@damage 2d8 + 9}) lightning damage."
+					]
+				},
+				{
+					"name": "Gliding Stab",
+					"entries": [
+						"{@atk mw} {@hit 17} to hit, reach 20 ft., one target. {@h}16 ({@damage 8d8 + 9}) piercing damage."
+					]
+				}
+			],
+			"legendaryActions": 2,
+			"legendary": [
+				{
+					"name": "Guiding Stab",
+					"entries": [
+						"Ornstein makes a Guiding Stab attack."
+					]
+				}
+			],
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"damageTags": [
+				"L",
+				"P"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"paralyzed",
+				"petrified",
+				"restrained",
+				"stunned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Executioner Smough",
+			"isNamedCreature": true,
+			"source": "bingus",
+			"size": [
+				"H"
+			],
+			"type": "humanoid",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "40d20 + 360",
+				"average": 780
+			},
+			"speed": {
+				"walk": 45
+			},
+			"str": 30,
+			"dex": 14,
+			"con": 29,
+			"int": 17,
+			"wis": 25,
+			"cha": 29,
+			"save": {
+				"wis": "+15",
+				"str": "+18",
+				"int": "+11"
+			},
+			"senses": [
+				"blindsight 60 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 17,
+			"resist": [
+				"bludgeoning"
+			],
+			"immune": [
+				"psychic"
+			],
+			"vulnerable": [
+				"fire"
+			],
+			"conditionImmune": [
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"paralyzed"
+			],
+			"languages": [
+				"Common"
+			],
+			"cr": "25",
+			"trait": [
+				{
+					"name": "Legendary Resistance (4/Day)",
+					"entries": [
+						"If Smough fails a saving throw, he can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"Smough has advantage on saving throws against spells and other magical effects."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Smough makes two Hammer Smash attacks."
+					]
+				},
+				{
+					"name": "Hammer Smash",
+					"entries": [
+						"{@atk mw} {@hit 17} to hit, reach 15 ft., one target. {@h} ({@damage 5d8 + 9}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Hammer Sweep",
+					"entries": [
+						"Each creature in a 20-foot Half-Sphere originating from you makes a Dexterity saving throw, taking ({@damage 12d8+9}) Bludgeoning damage on a failed save or half as much damage on a successful one. Creatures that fail are {@condition Prone|XPHB}."
+					]
+				}
+			],
+			"legendaryActions": 3,
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"traitTags": [
+				"Legendary Resistances",
+				"Magic Resistance"
+			],
+			"senseTags": [
+				"B",
+				"SD"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened",
+				"paralyzed",
+				"petrified",
+				"restrained",
+				"stunned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true
+		}
+	]
+}
